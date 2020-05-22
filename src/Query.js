@@ -19,13 +19,16 @@ class Query extends Component {
         e.preventDefault()
         this.props.setQuery(this.state.query)
         this.props.getWord()
-    }
-
-    handleClearQuery = () => {
         this.setState({
             query: ""
         })
     }
+
+    // handleClearQuery = () => {
+    //     this.setState({
+    //         query: ""
+    //     })
+    // }
 
     render() {
         return (
@@ -44,7 +47,7 @@ class Query extends Component {
                         value="Search"
                     />
                 </form>
-                <button className="clear-button" onClick={this.handleClearQuery}>Clear search</button>
+                {/* <button className="clear-button" onClick={this.handleClearQuery}>Clear search</button> */}
             </div>
         )
     }
