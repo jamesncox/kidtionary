@@ -1,0 +1,68 @@
+/* width */
+
+@media only screen and (max-width: 925px) {
+    .App {
+      width: 80%;
+    }
+  
+    .searchbar {
+      width: 30%;
+    }
+  }
+  
+  @media only screen and (max-width: 720px) {
+    .App {
+      width: 85%;
+    }
+  
+    .searchbar {
+      width: 40%;
+    }
+  }
+  
+  @media only screen and (max-width: 510px) {
+    .searchbar {
+      width: 45%;
+    }
+  }
+  
+  @media only screen and (max-width: 420px) {
+  
+    .App {
+      width: 95%;
+      min-height: 600px;
+    }
+  
+    h1 {
+      font-size: 30px;
+      padding: 10px;
+    }
+  
+    h3 {
+      font-size: 30px;
+    }
+  
+    .searchbar{
+      width: 50%;
+    }
+  } 
+  
+  @media only screen and (max-width: 380px) {
+    .searchbar {
+      width: 60%;
+    }
+  }
+  
+  /* height */
+  
+  @media only screen and (max-height: 420px) {
+    .App {
+      width: 90%;
+      min-height: 400px;
+    }
+  
+    h1 {
+      font-size: 30px;
+      padding: 10px;
+    }
+  }
