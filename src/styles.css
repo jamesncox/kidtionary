@@ -6,23 +6,15 @@
   border: solid #000000 1px;
   width: 70%;
   min-height: 700px;
-  background: #B993D6;  
-  background: -webkit-linear-gradient(to right, #8CA6DB, #B993D6); 
-  background: linear-gradient(to right, #8CA6DB, #B993D6);
+  background: -webkit-linear-gradient(to right, #004e92, #000428);
+  background: linear-gradient(to right, #004e92, #000428);
   margin: auto;
   border-radius: .1in;
 }
 
-/* body {
-  background-color: var(--bg-color);
-  color: var(--font-color);
-} */
-
 h1 {
-  /* color: var(--secondary-color); */
   color: rgba(255, 255, 255, 0.95);
   text-shadow: 1px 1px 1px black;
-  /* border-bottom-left-radius: .9in; */
   font-size: 40px;
   padding: 15px;
   background: linear-gradient(to left, rgba(0, 0, 0, 0.9), transparent 100%);
@@ -37,7 +29,7 @@ h2 {
 h3 {
   font-family: 'Work Sans', sans-serif;
   font-size: 40px;
-  color: #424242;
+  color: rgba(255, 255, 255, 0.95);
   margin: 10px;
   margin-top: -10px;
 }
@@ -56,7 +48,6 @@ input {
 ul {
   font-family: 'Work Sans', sans-serif;
   margin-bottom: 10px;
-  margin-left: -35px;
   color: #272727;
 }
 
@@ -77,10 +68,28 @@ p {
         -8px -8px 12px 0 rgba(0, 0, 0, .25) inset;
 }
 
+.definition-grid {
+  padding: 30px;
+  padding-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.word-card {
+  font-family: 'Work Sans', sans-serif;
+  border-radius: .05in;
+  color: rgb(0, 0, 0);
+  width: 33%;
+  min-height: 10px;
+  margin: 5px;
+  padding: 15px;
+}
+
 .suggestion-button {
   margin: 3px;
   background-color: rgba(0, 0, 0, 0.37);
-  color: white;
+  color: rgb(241, 238, 238);
   border-radius: 4px;
   min-height: 40px;
   min-width: 130px;

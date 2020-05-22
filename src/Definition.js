@@ -22,20 +22,74 @@ function Definition(props) {
         )
     }
 
+    const selectCardColor = () => {
+        let color
+        let noun = "#2ECC71"
+        let verb = "#1e90ff"
+        let adjective = "#F39C12"
+        let pronoun = "#E74C3C"
+
+        props.word.map(def => {
+            console.log(def.fl)
+            if (def.fl === "noun") {
+                return color = noun
+            } else if (def.fl === "verb") {
+                return color = verb
+            } else if (def.fl === "adjective") {
+                return color = adjective
+            } else {
+                return color = pronoun
+            }
+        })
+    }
+
     const mapDefinitions = () => {
+        let color
+        let noun = "#2ECC71"
+        let verb = "#1e90ff"
+        let adjective = "#F39C12"
+        let pronoun = "#E74C3C"
+        let abbreviation = "#FF1493"
+        let preposition = "#7FFFD4"
+        let adverb = "#FF4500"
+        let prefix = "#00FFFF"
+        let unknown = "#FFFFF0"
+
         if (props.word) {
             return (
                 props.word.map(def => {
+                    if (def.fl === "noun") {
+                        color = noun
+                    } else if (def.fl === "verb") {
+                        color = verb
+                    } else if (def.fl === "adjective") {
+                        color = adjective
+                    } else if (def.fl === "abbreviation") {
+                        color = abbreviation
+                    } else if (def.fl === "preposition") {
+                        color = preposition
+                    } else if (def.fl === "adverb") {
+                        color = adverb
+                    } else if (def.fl === "pronoun") {
+                        color = pronoun
+                    } else if (def.fl === "prefix") {
+                        color = prefix
+                    } else {
+                        color = unknown
+                    }
+
                     return (
                         def.shortdef.map((shortdefArray, index) => {
                             return (
-                                <ul
+                                <div
+                                    className="word-card"
+                                    style={{ backgroundColor: color }}
                                     key={props.word.id + index.toString()}>
                                     <strong>
                                         {def.fl}
                                     </strong>
-                  : {shortdefArray}
-                                </ul>
+                                    : {shortdefArray}
+                                </div>
                             )
                         })
                     )
@@ -60,14 +114,16 @@ function Definition(props) {
                 >
                     See other suggestions
                 </button>
-                {mapDefinitions()}
+                <div className="definition-grid">
+                    {mapDefinitions()}
+                </div>
             </>
         )
     } else {
         return (
-            <>
+            <div className="definition-grid">
                 {mapDefinitions()}
-            </>
+            </div>
         )
     }
 }

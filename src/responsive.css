@@ -18,6 +18,11 @@
     .searchbar {
       width: 40%;
     }
+
+    .word-card {
+      font-size: 18px;
+      min-width: 80%;
+    }
   }
   
   @media only screen and (max-width: 510px) {
