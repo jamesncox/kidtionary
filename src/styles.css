@@ -54,6 +54,7 @@ ul {
 p {
   font-family: 'Work Sans', sans-serif;
   font-size: 15px;
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .grid {

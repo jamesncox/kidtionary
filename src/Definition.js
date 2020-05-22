@@ -51,8 +51,9 @@ function Definition(props) {
         let pronoun = "#E74C3C"
         let abbreviation = "#FF1493"
         let preposition = "#7FFFD4"
-        let adverb = "#FF4500"
+        let adverb = "#EE82EE"
         let prefix = "#00FFFF"
+        let geographicalName = "#F5DEB3"
         let unknown = "#FFFFF0"
 
         if (props.word) {
@@ -74,6 +75,8 @@ function Definition(props) {
                         color = pronoun
                     } else if (def.fl === "prefix") {
                         color = prefix
+                    } else if (def.fl === "geographical name") {
+                        color = geographicalName
                     } else {
                         color = unknown
                     }
