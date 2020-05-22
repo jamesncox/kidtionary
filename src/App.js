@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './styles.css';
+import React from "react";
+import "./styles.css";
+import "./responsive.css"
+import Container from "./Container"
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      {/* <div class="theme-switch-wrapper">
+        <label class="theme-switch" htmlFor="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+        <em>Enable Dark Mode</em>
+      </div> */}
+
+      <h1>Kidtionary</h1>
+      <Container />
     </div>
   );
 }
-
-export default App;
