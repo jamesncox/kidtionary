@@ -1,0 +1,13 @@
+const SET_WORD = "SET_WORD"
+const CLEAR_WORD = "CLEAR_WORD"
+const SET_QUERY = "SET_QUERY"
+const CLEAR_QUERY = "CLEAR_QUERY"
+const IS_ERROR = "IS_ERROR"
+
+export {
+    SET_WORD,
+    CLEAR_WORD,
+    SET_QUERY,
+    CLEAR_QUERY,
+    IS_ERROR
+}
