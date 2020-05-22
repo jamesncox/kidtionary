@@ -1,12 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Definition from './Definition'
-import { clearWord, clearQuery } from './actions/word'
+import { clearEverything, clearQuery } from './actions/word'
 
 function Word(props) {
 
     const handleClear = () => {
-        props.clearWord()
+        props.clearEverything()
         props.clearQuery()
     }
 
@@ -27,4 +27,4 @@ const mapStateToProps = (state) => ({
     query: state.query.query
 })
 
-export default connect(mapStateToProps, { clearWord, clearQuery })(Word)
+export default connect(mapStateToProps, { clearEverything, clearQuery })(Word)

@@ -1,6 +1,7 @@
 import {
     SET_WORD,
-    CLEAR_WORD
+    CLEAR_WORD,
+    CLEAR_EVERYTHING
 } from '../actionTypes'
 
 export default (state = { word: null, suggestions: null }, action) => {
@@ -15,6 +16,9 @@ export default (state = { word: null, suggestions: null }, action) => {
             }
 
         case CLEAR_WORD:
+            return { ...state, word: null }
+
+        case CLEAR_EVERYTHING:
             return { ...state, word: null, suggestions: null }
 
         default:

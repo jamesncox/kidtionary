@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import SuggestedQuery from './SuggestedQuery'
+import { clearWord, clearQuery } from './actions/word'
 
 function Definition(props) {
 
@@ -10,6 +11,15 @@ function Definition(props) {
             let y = Object.keys(x)
             return y.includes("meta")
         }
+    }
+
+    const handleMoreOptions = () => {
+        console.log("inside see other suggestions")
+        props.clearWord()
+        props.clearQuery()
+        return (
+            <SuggestedQuery />
+        )
     }
 
     const mapDefinitions = () => {
@@ -32,6 +42,7 @@ function Definition(props) {
                 })
             )
         } else if (props.suggestions) {
+            props.clearQuery()
             return (
                 <SuggestedQuery />
             )
@@ -43,7 +54,12 @@ function Definition(props) {
     if (props.suggestions && checkForObjectKeys() === true) {
         return (
             <>
-                <button className="clear-button">See other suggestions</button>
+                <button
+                    className="clear-button"
+                    onClick={handleMoreOptions}
+                >
+                    See other suggestions
+                </button>
                 {mapDefinitions()}
             </>
         )
@@ -62,4 +78,4 @@ const mapStateToProps = (state) => ({
     suggestions: state.word.suggestions
 })
 
-export default connect(mapStateToProps)(Definition)
+export default connect(mapStateToProps, { clearWord, clearQuery })(Definition)
