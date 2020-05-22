@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { SET_QUERY } from './actionTypes'
+import { SET_QUERY, CLEAR_SUGGESTION } from './actionTypes'
 import { getWord } from './actions/word'
 
 class Query extends Component {
@@ -17,6 +17,7 @@ class Query extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
+        this.props.clearSuggestion()
         this.props.setQuery(this.state.query)
         this.props.getWord()
         this.setState({
@@ -55,7 +56,8 @@ class Query extends Component {
 
 const mapDispatchToProps = (dispatch) => ({
     setQuery: (query) => dispatch({ type: SET_QUERY, payload: query }),
-    getWord: () => dispatch(getWord())
+    getWord: () => dispatch(getWord()),
+    clearSuggestion: () => dispatch({ type: CLEAR_SUGGESTION })
 })
 
 export default connect(null, mapDispatchToProps)(Query)
