@@ -9,7 +9,7 @@ export default (state = { word: null, suggestions: null }, action) => {
             let x = Object.values(action.payload)[0]
             let y = Object.keys(x)
             if (y.includes("meta")) {
-                return { ...state, word: action.payload, suggestions: null }
+                return { ...state, word: action.payload }
             } else {
                 return { ...state, word: null, suggestions: action.payload }
             }
