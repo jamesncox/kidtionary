@@ -4,6 +4,14 @@ import SuggestedQuery from './SuggestedQuery'
 
 function Definition(props) {
 
+    const checkForObjectKeys = () => {
+        if (props.word) {
+            let x = Object.values(props.word)[0]
+            let y = Object.keys(x)
+            return y.includes("meta")
+        }
+    }
+
     const mapDefinitions = () => {
         if (props.word) {
             return (
@@ -32,11 +40,20 @@ function Definition(props) {
         }
     }
 
-    return (
-        <>
-            {mapDefinitions()}
-        </>
-    )
+    if (props.suggestions && checkForObjectKeys() === true) {
+        return (
+            <>
+                <button className="clear-button">See other suggestions</button>
+                {mapDefinitions()}
+            </>
+        )
+    } else {
+        return (
+            <>
+                {mapDefinitions()}
+            </>
+        )
+    }
 }
 
 const mapStateToProps = (state) => ({
