@@ -53,7 +53,13 @@ function Definition(props) {
         let preposition = "#7FFFD4"
         let adverb = "#EE82EE"
         let prefix = "#00FFFF"
-        let geographicalName = "#F5DEB3"
+        let geographicalName = "#FFF0F5"
+        let conjunction = "#BA55D3"
+        let adjectiveSuffix = "#98FB98"
+        let adverbSuffix = "#DDA0DD"
+        let verbSuffix = "#FA8072"
+        let nounSuffix = "#40E0D0"
+        let verbOrAdjectiveSuffix = "#DB7093"
         let unknown = "#FFFFF0"
 
         if (props.word) {
@@ -77,6 +83,18 @@ function Definition(props) {
                         color = prefix
                     } else if (def.fl === "geographical name") {
                         color = geographicalName
+                    } else if (def.fl === "noun suffix") {
+                        color = nounSuffix
+                    } else if (def.fl === "conjunction") {
+                        color = conjunction
+                    } else if (def.fl === "adjective suffix") {
+                        color = adjectiveSuffix
+                    } else if (def.fl === "adverb suffix") {
+                        color = verbSuffix
+                    } else if (def.fl === "verb suffix") {
+                        color = adverbSuffix
+                    } else if (def.fl === "verb suffix or adjective suffix") {
+                        color = verbOrAdjectiveSuffix
                     } else {
                         color = unknown
                     }
