@@ -30,6 +30,12 @@
       width: 45%;
     }
   }
+
+  @media only screen and (max-width: 500px) {
+    .suggestion-grid {
+      padding: 5px;
+    }
+  }
   
   @media only screen and (max-width: 420px) {
   
@@ -39,7 +45,7 @@
     }
   
     h1 {
-      font-size: 30px;
+      font-size: 40px;
       padding: 10px;
     }
   

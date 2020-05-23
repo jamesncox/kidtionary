@@ -28,7 +28,7 @@ function SuggestedQuery(props) {
     }
 
     return (
-        <div className="grid">
+        <div className="suggestion-grid">
             <p>Did you mean</p>
             {mapSuggestions()}
         </div>
