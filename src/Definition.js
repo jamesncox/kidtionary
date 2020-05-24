@@ -14,33 +14,11 @@ function Definition(props) {
     }
 
     const handleMoreOptions = () => {
-        console.log("inside see other suggestions")
         props.clearWord()
         props.clearQuery()
         return (
             <SuggestedQuery />
         )
-    }
-
-    const selectCardColor = () => {
-        let color
-        let noun = "#2ECC71"
-        let verb = "#1e90ff"
-        let adjective = "#F39C12"
-        let pronoun = "#E74C3C"
-
-        props.word.map(def => {
-            console.log(def.fl)
-            if (def.fl === "noun") {
-                return color = noun
-            } else if (def.fl === "verb") {
-                return color = verb
-            } else if (def.fl === "adjective") {
-                return color = adjective
-            } else {
-                return color = pronoun
-            }
-        })
     }
 
     const mapDefinitions = () => {
@@ -49,7 +27,7 @@ function Definition(props) {
         let verb = "#1e90ff"
         let adjective = "#F39C12"
         let pronoun = "#E74C3C"
-        let abbreviation = "#FF1493"
+        let abbreviation = "#C71585"
         let preposition = "#7FFFD4"
         let adverb = "#EE82EE"
         let prefix = "#00FFFF"
@@ -60,6 +38,7 @@ function Definition(props) {
         let verbSuffix = "#FA8072"
         let nounSuffix = "#40E0D0"
         let verbOrAdjectiveSuffix = "#DB7093"
+        let interjection = "#FFFF00"
         let unknown = "#FFFFF0"
 
         if (props.word) {
@@ -87,6 +66,8 @@ function Definition(props) {
                         color = nounSuffix
                     } else if (def.fl === "conjunction") {
                         color = conjunction
+                    } else if (def.fl === "interjection") {
+                        color = interjection
                     } else if (def.fl === "adjective suffix") {
                         color = adjectiveSuffix
                     } else if (def.fl === "adverb suffix") {
