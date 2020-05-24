@@ -17,6 +17,7 @@ class Query extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
+        document.activeElement.blur()
         this.props.clearSuggestion()
         this.props.setQuery(this.state.query)
         this.props.getWord()
