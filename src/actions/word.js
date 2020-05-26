@@ -32,7 +32,7 @@ export const getWord = () => {
 
         const query = state.query.query
         try {
-            const res = await fetch(`https://dictionaryapi.com/api/v3/references/sd2/json/${query}?key=01350b9d-a8fd-43a3-9832-31da92542dfe`)
+            const res = await fetch(`https://dictionaryapi.com/api/v3/references/sd2/json/${query}?key=${process.env.REACT_APP_MIRRIAM_WEBSTER_API_KEY}`)
             if (!res.ok) {
                 throw res
             }
