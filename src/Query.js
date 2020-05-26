@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { SET_QUERY, CLEAR_SUGGESTION } from './actionTypes'
+import {
+    SET_QUERY,
+    CLEAR_SUGGESTION
+} from './actionTypes'
 import { getWord } from './actions/word'
 
 class Query extends Component {
@@ -17,13 +20,17 @@ class Query extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        document.activeElement.blur()
-        this.props.clearSuggestion()
-        this.props.setQuery(this.state.query)
-        this.props.getWord()
-        this.setState({
-            query: ""
-        })
+        if (this.state.query === "") {
+            e.preventDefault()
+        } else {
+            document.activeElement.blur()
+            this.props.clearSuggestion()
+            this.props.setQuery(this.state.query)
+            this.props.getWord()
+            this.setState({
+                query: ""
+            })
+        }
     }
 
     // handleClearQuery = () => {
