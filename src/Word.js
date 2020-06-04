@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import Definition from './Definition'
 import { clearEverything, clearQuery } from './actions/word'
-// import Audio from './Audio.js'
+import Audio from './Audio.js'
 
 function Word(props) {
 
@@ -15,9 +15,10 @@ function Word(props) {
         return str.toUpperCase();
     }
 
+    // Add <Audio /> to <h3> </h3> below to render the speech bubble
     return (
         <div className="word">
-            <h3>{capitalize(props.query)}</h3>
+            <h3>{capitalize(props.query)} </h3>
             <button className="clear-button" onClick={handleClear}>Clear Info</button>
             <Definition />
         </div>
