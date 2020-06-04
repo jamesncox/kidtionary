@@ -31,7 +31,7 @@ function Audio(props) {
                 <audio className="audio-element" key={audioRef}>
                     <source src={`https://media.merriam-webster.com/audio/prons/en/us/mp3/${audioRef.slice(0, 1)}/${audioRef}.mp3`}></source>
                 </audio>
-                {'\uD83D\uDDE9'}
+                {'\uD83D\uDD0A'}
             </p>
         )
     } else {
