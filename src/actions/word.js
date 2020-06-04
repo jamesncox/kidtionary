@@ -37,7 +37,7 @@ export const getWord = () => {
                 throw res
             }
             const word = await res.json()
-            console.log(word)
+            // console.log(word)
             dispatch(setWord(word))
         } catch (err) {
             // alert(`Sorry,cannot define ${query}`)

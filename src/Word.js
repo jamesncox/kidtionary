@@ -18,7 +18,7 @@ function Word(props) {
     // Add <Audio /> to <h3> </h3> below to render the speech bubble
     return (
         <div className="word">
-            <h3>{capitalize(props.query)} </h3>
+            <h3>{capitalize(props.query)}<Audio /></h3>
             <button className="clear-button" onClick={handleClear}>Clear Info</button>
             <Definition />
         </div>

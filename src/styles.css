@@ -139,7 +139,7 @@ p {
 }
 
 .audio-symbol:hover {
-  color: rgb(255, 0, 179);
-  text-shadow: white 3px 3px 2px;
+  color: rgb(237, 36, 255);
+  text-shadow: rgb(88, 165, 252) 3px 3px 2px;
   cursor: pointer;
 }
