@@ -8,12 +8,11 @@ function Audio(props) {
         audioEl.play()
     }
 
-    // check to see if a word has an MP3 under the "sound" property
+    // check which conditions a word has an MP3 under the "sound" property
     const checkForSoundProp = () => {
         if (props.word) {
             let x = Object.values(props.word)[0]
             let y = Object.values(x)
-            debugger
 
             if (Object.keys(x).includes("history")) {
                 return Object.keys(y[1].prs[0]).includes("sound")
@@ -23,6 +22,8 @@ function Audio(props) {
                 return false
             } else if (Object.keys(x).includes("hom")) {
                 return Object.keys(y[2].prs[0]).includes("sound")
+            } else if (Object.values(y[1])[0] === "re-") {
+                return false
             } else {
                 return Object.keys(y[1].prs[0]).includes("sound")
             }
