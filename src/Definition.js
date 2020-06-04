@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import SuggestedQuery from './SuggestedQuery'
 import { clearWord, clearQuery } from './actions/word'
-import Speech from 'react-speech'
+// import Speech from 'react-speech'
 
 function Definition(props) {
 
@@ -90,7 +90,7 @@ function Definition(props) {
                                     style={{ backgroundColor: color }}
                                     key={props.word.id + index.toString()}>
 
-                                    <Speech
+                                    {/* <Speech
                                         text={shortdefArray}
                                         pitch="0.7"
                                         rate="0.8"
@@ -99,8 +99,8 @@ function Definition(props) {
                                         textAsButton={true}
                                         displayText={'\ud83d\udde3'}
                                     >
-                                    </Speech>
-                                    {' '}
+                                    </Speech> */}
+                                    {/* {' '} */}
                                     <strong>
                                         {def.fl}
                                     </strong>
