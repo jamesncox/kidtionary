@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import SuggestedQuery from './SuggestedQuery'
 import { clearWord, clearQuery } from './actions/word'
+import Speech from 'react-speech'
 
 function Definition(props) {
 
@@ -22,6 +23,7 @@ function Definition(props) {
     }
 
     const mapDefinitions = () => {
+
         let color
         let noun = "#2ECC71"
         let verb = "#1e90ff"
@@ -87,6 +89,18 @@ function Definition(props) {
                                     className="word-card"
                                     style={{ backgroundColor: color }}
                                     key={props.word.id + index.toString()}>
+
+                                    <Speech
+                                        text={shortdefArray}
+                                        pitch="0.7"
+                                        rate="0.8"
+                                        lang="en-GB"
+                                        voice="Daniel"
+                                        textAsButton={true}
+                                        displayText={'\ud83d\udde3'}
+                                    >
+                                    </Speech>
+                                    {' '}
                                     <strong>
                                         {def.fl}
                                     </strong>
