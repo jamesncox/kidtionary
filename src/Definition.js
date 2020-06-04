@@ -99,8 +99,8 @@ function Definition(props) {
                                         textAsButton={true}
                                         displayText={'\ud83d\udde3'}
                                     >
-                                    </Speech> */}
-                                    {/* {' '} */}
+                                    </Speech>
+                                    {' '} */}
                                     <strong>
                                         {def.fl}
                                     </strong>

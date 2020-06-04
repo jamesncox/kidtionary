@@ -13,7 +13,7 @@ function Audio(props) {
         if (props.word) {
             let x = Object.values(props.word)[0]
             let y = Object.values(x)
-            debugger
+            // debugger
 
             if (Object.keys(x).includes("history")) {
                 return Object.keys(y[1].prs[0]).includes("sound")
