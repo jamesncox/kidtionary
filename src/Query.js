@@ -33,12 +33,6 @@ class Query extends Component {
         }
     }
 
-    // handleClearQuery = () => {
-    //     this.setState({
-    //         query: ""
-    //     })
-    // }
-
     render() {
         return (
             <div>
@@ -56,7 +50,6 @@ class Query extends Component {
                         value="Search"
                     />
                 </form>
-                {/* <button className="clear-button" onClick={this.handleClearQuery}>Clear search</button> */}
             </div>
         )
     }
