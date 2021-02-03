@@ -87,6 +87,10 @@
   .searchbar {
     width: 60%;
   }
+
+  .definition-grid {
+    padding: 5px;
+  }
 }
 
 /* height */
