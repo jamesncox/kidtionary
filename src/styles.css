@@ -3,13 +3,14 @@
 .App {
   font-family: 'Indie Flower', cursive;
   text-align: center;
-  border: solid #000000 1px;
+  /* border: solid #000000 1px; */
   width: 70%;
   min-height: 700px;
-  background: -webkit-linear-gradient(to right, #004e92, #000428);
-  background: linear-gradient(to right, #004e92, #000428);
+  background-color: rgb(34, 74, 134);
+  /* background: -webkit-linear-gradient(to right, #004e92, #000428);
+  background: linear-gradient(to right, #004e92, #000428); */
   margin: auto;
-  border-radius: .1in;
+  border-radius: .25rem;
 }
 
 h1 {
@@ -17,6 +18,8 @@ h1 {
   text-shadow: 1px 1px 1px black;
   font-size: 50px;
   padding: 15px;
+  margin-top: 0;
+  border-radius: .25rem;
   background: linear-gradient(to left, rgba(0, 0, 0, 0.9), transparent 100%);
 }
 
@@ -84,10 +87,11 @@ p {
 }
 
 .suggestion-button {
-  margin: 3px;
-  background-color: rgba(0, 0, 0, 0.37);
+  margin: .2rem;
+  background-color: rgba(0, 0, 0, 0.158);
   color: rgb(241, 238, 238);
   border-radius: 4px;
+  font-size: 15px;
   min-height: 40px;
   min-width: 130px;
 }
@@ -95,7 +99,7 @@ p {
 .clear-button {
   margin: 4px;
   margin-bottom: 10px;
-  background-color: rgba(0, 0, 0, 0.158);
+  background-color: rgba(22, 11, 51, 0.63);
   color: rgba(255, 255, 255, 0.829);
   border-radius: 4px;
   min-height: 27px;
@@ -119,7 +123,9 @@ p {
 
 .generate-button{
   margin-left: 5px;
-  border-radius: .05in;
+  background-color: rgba(0, 0, 0, 0.158);
+  color: rgb(241, 238, 238);
+  border-radius: 4px;
   font-size: 15px;
   margin-bottom: 20px;
 }
